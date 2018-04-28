@@ -5,7 +5,13 @@ const inputs = document.querySelectorAll('.controls input');
 //does not have all the methods it has. It has keys and entries.
 
 function handleUpdate() {
-    console.log(this.value)
+    //dataset is an object that is all ready you don't have to use an attribute
+    //selector
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value)
 }
 
 inputs.forEach(input => input.addEventListener('change', handleUpdate))
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate))
+
+//data attribute is an attribute you make up
