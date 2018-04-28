@@ -1,3 +1,18 @@
+/* css variable declared at highest level possible root 
+set the default values for the variables */
+
+:root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: var(--blur);
+}
+
 body {
       text-align: center;
       background: #193549;
