@@ -8,7 +8,7 @@ function handleUpdate() {
     //dataset is an object that is all ready you don't have to use an attribute
     //selector
     const suffix = this.dataset.sizing || '';
-    document.documentElement.style.setProperty(`--${this.name}`, this.value)
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
 }
 
 inputs.forEach(input => input.addEventListener('change', handleUpdate))
