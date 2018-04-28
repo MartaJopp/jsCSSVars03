@@ -10,7 +10,11 @@ set the default values for the variables */
 img {
     padding: var(--spacing);
     background: var(--base);
-    filter: var(--blur);
+    filter: blur(var(--blur));
+}
+
+.h1 {
+    color: var(--base);
 }
 
 body {
